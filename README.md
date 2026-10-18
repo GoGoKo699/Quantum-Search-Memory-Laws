@@ -33,6 +33,12 @@ Start with the [model, exact statements and proof dependencies](science/model.md
 
 [The LLM reading guide](llms.txt) maps scientific questions to their authoritative files.
 
+## Learn the project
+
+The single educational anchor is Andrew M. Childs's *Lecture Notes on Quantum Algorithms* (17 April 2025). The [30-milestone map](learning/MILESTONES.md) develops 12 background/preliminary milestones and 18 narrative/innovation milestones, progressing from local ingredients to global understanding within each phase. Each milestone has a central question, an understanding target, dependencies and source pointers.
+
+The [Childs-to-project bridge](learning/CHILDS_BRIDGE.md) gives the targeted source readings, translates ideal-query notation, and supplies the mixed-state, hidden-memory and distinguishability steps needed for this problem. The map and bridge lead to the authoritative scientific files above; they do not require reading the entire lecture course first.
+
 ## Reproduce the finite checks
 
 From the repository root, run:
