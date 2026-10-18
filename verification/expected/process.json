@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "arithmetic": "exact rational and Boolean",
+  "paired_dilution_parameters": 5,
+  "two_pair_innovation_parameters": 5,
+  "phase_certificate_cases": 928,
+  "certificate_N_range": [
+    3,
+    8
+  ]
+}

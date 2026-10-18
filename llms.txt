@@ -1,0 +1,73 @@
+# Quantum Search Memory Laws
+
+This repository determines optimal search costs for a stationary, fair, hidden
+Markov process that applies or omits an unknown oracle. The full scientific
+account is organized by topic under science/.
+
+Canonical files:
+- README.md: scientific question, quantum/classical resource table, reading
+  routes, reproduction command, consequential scope, purpose and contact.
+- science/model.md: authoritative task, activation process, clock contracts,
+  success and budget quantifiers, main quantum and classical theorems, and
+  proof dependencies.
+- science/lower-bounds.md: fixed-horizon adaptive normal form, positive
+  conditional components, hidden-memory potential, ideal-query simulation,
+  availability lower bound and endpoint qualifications.
+- science/upper-bounds.md: exact two-reference phase certificate, finite-N
+  Grover estimate, history-conditional mixing, fixed trial budgets, paired
+  logical oracle, state preparation and full control/resource accounting.
+- science/classical-comparison.md: common bit-oracle interface, bounded
+  candidate sampler, simultaneous classical call/slot bounds and comparison.
+- science/weighted-extension.md: weighted reflection packing and fractional
+  block sensitivity at the identity input, including its translation boundary.
+- science/paired-comparison.md: independent fair pairs, exact paused Grover
+  dynamics, mismatch theorem and full-process IID reduction.
+- science/interpretation.md: three resource obstructions, regime table,
+  persistence versus alternation and query advantage versus time advantage.
+- references/RELATED_WORK.md: primary noisy-search comparisons and attribution.
+- references/references.bib: structured primary bibliography.
+- verification/README.md: reproduction instructions, finite evidence and limits.
+- verification/run_all.py: exact process checks and finite numerical potential
+  checks, compared with committed outputs without default rewrites.
+
+Reader routes:
+- For the story: model -> upper-bound mechanisms -> lower-bound obstructions
+  -> classical comparison -> interpretation.
+- For a theorem: begin with the exact model and resource quantifiers, then
+  follow the authoritative proof and its cited ingredients.
+- For resource accounting: compare both clock contracts in model.md with
+  the explicit schedules and control costs in upper-bounds.md and
+  classical-comparison.md.
+- For novelty: read RELATED_WORK.md and distinguish the conditional quantum
+  operation from the distribution of its hidden classical flag.
+- For reproduction: read verification/README.md, run the documented command,
+  and distinguish finite calculations from the analytical proof.
+
+Preserve these distinctions:
+- delta is a supplied switching probability in (0,1]; r=min(delta,1-delta).
+  Activation is fair at every fixed slot, but a posterior after observation
+  need not be fair. Marginal channel formulas require the stated independence.
+- q bounds actual calls, K is the random call count, and T bounds elapsed slots.
+  Idle slots advance only the clock-driven process. Both bounds are attained
+  simultaneously by one algorithm in each computational model.
+- The lower bound on expected K is on the identity/no-mark input within a
+  deterministic finite horizon; it is not an unrestricted expected-time result.
+- The phase upper uses no controlled query. Controlled access is granted only
+  as a stronger model in the lower bound. Classical comparison uses the same
+  bit-response interface as the quantum algorithm.
+- The no-mark instance is not an additional known-unmarked query state.
+  N>=3 is required by the common phase/bit theorem and two-reference certificate.
+- Register reset is not environment reset. The upper proof conditions on the
+  full preceding history rather than assuming independent search restarts.
+- At delta=0 success 0.9 is impossible. At delta=1 two consecutive calls are
+  a perfect logical query, despite fair marginal inactivity.
+- The weighted corollary uses fbs(f,0^n), not max_x fbs(f,x). Translating the
+  input does not preserve a hidden omitted oracle. Generic functions inherit
+  necessary lower bounds, not matching upper bounds from this corollary.
+- Independent pair refresh and stationary Markov memory are distinct models.
+  The supporting paired theorem is stated only for eta in [0,1/2].
+- Controls are ideal and their gate counts are separate from oracle slots.
+  Explicit long waiting counters can use O(log T) classical bits. No QRAM,
+  oracle-implementation speedup or general hardware fault tolerance is assumed.
+- Finite verification does not establish universal correctness, bibliographic
+  priority or external peer review. Use the complete proofs and primary sources.
