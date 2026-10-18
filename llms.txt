@@ -25,7 +25,15 @@ Canonical files:
 - science/interpretation.md: three resource obstructions, regime table,
   persistence versus alternation and query advantage versus time advantage.
 - references/RELATED_WORK.md: primary noisy-search comparisons and attribution.
-- references/references.bib: structured primary bibliography.
+- references/references.bib: selected educational anchor and primary research
+  bibliography.
+- learning/MILESTONES.md: exactly 30 project-defined understanding targets in
+  12 background/preliminaries and 18 narrative/innovation milestones, with
+  dependencies, conceptual connections and source pointers.
+- learning/CHILDS_BRIDGE.md: selected Childs anchor and edition, targeted
+  source readings, source-to-project notation and assumptions, locally
+  supplied mixed-state and hidden-memory foundations, a complete certificate
+  example, and connections to the authoritative proofs.
 - verification/README.md: reproduction instructions, finite evidence and limits.
 - verification/run_all.py: exact process checks and finite numerical potential
   checks, compared with committed outputs without default rewrites.
@@ -35,6 +43,9 @@ Reader routes:
   -> classical comparison -> interpretation.
 - For a theorem: begin with the exact model and resource quantifiers, then
   follow the authoritative proof and its cited ingredients.
+- For study: learning/MILESTONES.md -> the relevant sections of
+  learning/CHILDS_BRIDGE.md, Childs's notes and the canonical science.
+  Milestone dependencies express the project's conceptual structure.
 - For resource accounting: compare both clock contracts in model.md with
   the explicit schedules and control costs in upper-bounds.md and
   classical-comparison.md.
@@ -44,6 +55,11 @@ Reader routes:
   and distinguish finite calculations from the analytical proof.
 
 Preserve these distinctions:
+- Childs's Lecture Notes on Quantum Algorithms, dated 17 April 2025, is the
+  single educational anchor. The bridge identifies foundations supplied locally
+  and research-level proof ingredients; research citations remain available.
+- The 30-milestone map is independent of individual learners. It expresses
+  understanding targets and does not record personal lessons or assessments.
 - delta is a supplied switching probability in (0,1]; r=min(delta,1-delta).
   Activation is fair at every fixed slot, but a posterior after observation
   need not be fair. Marginal channel formulas require the stated independence.
