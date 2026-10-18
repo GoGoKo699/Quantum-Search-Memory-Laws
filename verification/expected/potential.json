@@ -1,0 +1,154 @@
+{
+  "purpose": "Finite numerical invariant check; universal claims use the analytical proof",
+  "seed": 20261018,
+  "N": 4,
+  "ancilla_dimension": 3,
+  "steps": 12,
+  "passed": true,
+  "checks": [
+    {
+      "scenario": "phase_calls",
+      "delta": 0.001,
+      "minimum_PSD_residual_eigenvalue": -2.2678439739520713e-16,
+      "largest_one_step_bound_excess": -73.67438338235864,
+      "largest_summed_bound_excess": -997.003003000997,
+      "maximum_conditional_trace_error": 6.66592325315969e-16
+    },
+    {
+      "scenario": "phase_calls",
+      "delta": 0.01,
+      "minimum_PSD_residual_eigenvalue": -2.252106177060746e-16,
+      "largest_one_step_bound_excess": -6.451770741918076,
+      "largest_summed_bound_excess": -97.03030096929278,
+      "maximum_conditional_trace_error": 1.1115669607081778e-15
+    },
+    {
+      "scenario": "phase_calls",
+      "delta": 0.1,
+      "minimum_PSD_residual_eigenvalue": -2.2115608204189232e-16,
+      "largest_one_step_bound_excess": -0.13609495755414397,
+      "largest_summed_bound_excess": -7.330623306233066,
+      "maximum_conditional_trace_error": 6.679320214533619e-16
+    },
+    {
+      "scenario": "phase_calls",
+      "delta": 0.25,
+      "minimum_PSD_residual_eigenvalue": -1.6009026833226658e-16,
+      "largest_one_step_bound_excess": -0.20554701405107448,
+      "largest_summed_bound_excess": -1.933333333333333,
+      "maximum_conditional_trace_error": 6.689943500005368e-16
+    },
+    {
+      "scenario": "phase_calls",
+      "delta": 0.5,
+      "minimum_PSD_residual_eigenvalue": -1.4655266586843027e-16,
+      "largest_one_step_bound_excess": -0.11639425251710404,
+      "largest_summed_bound_excess": -1.0,
+      "maximum_conditional_trace_error": 1.7767832196861638e-15
+    },
+    {
+      "scenario": "phase_calls",
+      "delta": 0.75,
+      "minimum_PSD_residual_eigenvalue": -3.247914211043072e-16,
+      "largest_one_step_bound_excess": -0.1565154833208901,
+      "largest_summed_bound_excess": -1.9333333333333327,
+      "maximum_conditional_trace_error": 8.882296637151561e-16
+    },
+    {
+      "scenario": "phase_calls",
+      "delta": 0.9,
+      "minimum_PSD_residual_eigenvalue": -2.8818181738360796e-16,
+      "largest_one_step_bound_excess": -0.556846998680198,
+      "largest_summed_bound_excess": -7.330623306233065,
+      "maximum_conditional_trace_error": 8.8855791691897e-16
+    },
+    {
+      "scenario": "phase_calls",
+      "delta": 0.99,
+      "minimum_PSD_residual_eigenvalue": -2.545989219267417e-16,
+      "largest_one_step_bound_excess": -1.5720579652245117,
+      "largest_summed_bound_excess": -97.03030096929281,
+      "maximum_conditional_trace_error": 9.013122057597902e-16
+    },
+    {
+      "scenario": "phase_calls",
+      "delta": 0.999,
+      "minimum_PSD_residual_eigenvalue": -1.832832466845637e-16,
+      "largest_one_step_bound_excess": -54.25548527085738,
+      "largest_summed_bound_excess": -997.0030030009972,
+      "maximum_conditional_trace_error": 1.1122561596558554e-15
+    },
+    {
+      "scenario": "bit_calls_and_idle_slots",
+      "delta": 0.001,
+      "minimum_PSD_residual_eigenvalue": -5.952932885445931e-16,
+      "largest_one_step_bound_excess": -0.00021827223528125828,
+      "largest_summed_bound_excess": -0.0024745588377486916,
+      "maximum_conditional_trace_error": 1.5568465820053908e-15
+    },
+    {
+      "scenario": "bit_calls_and_idle_slots",
+      "delta": 0.01,
+      "minimum_PSD_residual_eigenvalue": -4.493894076586778e-16,
+      "largest_one_step_bound_excess": -0.0012806427377264062,
+      "largest_summed_bound_excess": -0.019942273677367728,
+      "maximum_conditional_trace_error": 5.641559716710824e-16
+    },
+    {
+      "scenario": "bit_calls_and_idle_slots",
+      "delta": 0.1,
+      "minimum_PSD_residual_eigenvalue": -3.744039572350859e-16,
+      "largest_one_step_bound_excess": -0.005668215631849528,
+      "largest_summed_bound_excess": -0.10642744207826144,
+      "maximum_conditional_trace_error": 9.023264878079753e-16
+    },
+    {
+      "scenario": "bit_calls_and_idle_slots",
+      "delta": 0.25,
+      "minimum_PSD_residual_eigenvalue": -3.1650003513423367e-16,
+      "largest_one_step_bound_excess": -0.011593402679342668,
+      "largest_summed_bound_excess": -0.08942753665337416,
+      "maximum_conditional_trace_error": 6.704925035140889e-16
+    },
+    {
+      "scenario": "bit_calls_and_idle_slots",
+      "delta": 0.5,
+      "minimum_PSD_residual_eigenvalue": -3.987530215188725e-16,
+      "largest_one_step_bound_excess": 1.734723475976807e-18,
+      "largest_summed_bound_excess": -3.174543961037557e-16,
+      "maximum_conditional_trace_error": 1.5568496748688798e-15
+    },
+    {
+      "scenario": "bit_calls_and_idle_slots",
+      "delta": 0.75,
+      "minimum_PSD_residual_eigenvalue": -2.9455024823991976e-16,
+      "largest_one_step_bound_excess": -0.002934793108622935,
+      "largest_summed_bound_excess": -0.06191654196166163,
+      "maximum_conditional_trace_error": 8.952527235750882e-16
+    },
+    {
+      "scenario": "bit_calls_and_idle_slots",
+      "delta": 0.9,
+      "minimum_PSD_residual_eigenvalue": -4.3406949128612403e-16,
+      "largest_one_step_bound_excess": -0.001349621034832353,
+      "largest_summed_bound_excess": -0.08587577320370712,
+      "maximum_conditional_trace_error": 8.898312430444705e-16
+    },
+    {
+      "scenario": "bit_calls_and_idle_slots",
+      "delta": 0.99,
+      "minimum_PSD_residual_eigenvalue": -5.517026213421832e-16,
+      "largest_one_step_bound_excess": -0.0026544812675536877,
+      "largest_summed_bound_excess": -0.01863873733753807,
+      "maximum_conditional_trace_error": 1.6703416704286843e-15
+    },
+    {
+      "scenario": "bit_calls_and_idle_slots",
+      "delta": 0.999,
+      "minimum_PSD_residual_eigenvalue": -3.9338921669440184e-16,
+      "largest_one_step_bound_excess": -0.0002690938406006982,
+      "largest_summed_bound_excess": -0.0029107432988479953,
+      "maximum_conditional_trace_error": 1.8873988235983244e-15
+    }
+  ]
+}
