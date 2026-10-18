@@ -54,7 +54,7 @@ The suite checks exact activation identities and phase-certification cases, then
 
 The hidden process is stationary, fair, external, unobserved and not resettable. Its switching probability is supplied. All verification calls and waiting slots are counted. No fault flags, known-unmarked reference, ideal verification oracle or QRAM is used by the constructions.
 
-Known controls are ideal. Elapsed slots count a discrete oracle-interaction clock with control operations between slots; they are not a full device wall-clock or gate-depth estimate. Preparation, known-gate and counter costs are specified in the [resource account](science/upper-bounds.md#7-preparation-known-gates-workspace-and-output). The permanently inactive endpoint prevents the required success at $`\delta=0`$; perfect alternation at $`\delta=1`$ is included.
+Known controls are ideal. Elapsed slots count a discrete oracle-interaction clock with control operations between slots; they are not a full device wall-clock or gate-depth estimate. Preparation, known-gate and counter costs are specified in the [resource account](science/upper-bounds.md#7-preparation-known-gates-workspace-and-output). At $`\delta=0`$, the initially fair activation bit remains frozen; its inactive branch prevents the required success. Perfect alternation at $`\delta=1`$ is included.
 
 ## Purpose and contact
 
