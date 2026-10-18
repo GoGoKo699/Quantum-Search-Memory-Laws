@@ -7,11 +7,11 @@ O_w=I-2|w\rangle\langle w|,
 ```
 The label $`\varnothing`$ denotes the no-mark instance; it is not an additional query state. The hidden activation process satisfies
 ```math
-b_1\sim\operatorname{Bernoulli}(1/2),
+b_1\sim\mathrm{Bernoulli}(1/2),
 \qquad
 b_{t+1}=b_t\oplus z_t,
 \qquad
-z_t\stackrel{\mathrm{iid}}{\sim}\operatorname{Bernoulli}(\delta),
+z_t\stackrel{\mathrm{iid}}{\sim}\mathrm{Bernoulli}(\delta),
 \qquad 0<\delta\le1.
 ```
 An oracle call in slot $`t`$ applies $`O_w^{b_t}`$. Both $`N`$ and $`\delta`$ are supplied for choosing the integer block and mixing budgets; estimating the switching rate from oracle observations is not part of the construction. Write $`r=\min\{\delta,1-\delta\}`$. All logarithms below are natural.

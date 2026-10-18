@@ -27,9 +27,9 @@ Write $`O_{\varnothing}=I`$ for the no-mark input. The label $`\varnothing`$ den
 In oracle slot $`t`$, a call applies $`O_w^{b_t}`$. The hidden bit obeys
 
 ```math
-b_1\sim\operatorname{Bernoulli}(1/2),\qquad
+b_1\sim\mathrm{Bernoulli}(1/2),\qquad
 b_{t+1}=b_t\oplus z_t,\qquad
-z_t\stackrel{\mathrm{iid}}{\sim}\operatorname{Bernoulli}(\delta).
+z_t\stackrel{\mathrm{iid}}{\sim}\mathrm{Bernoulli}(\delta).
 ```
 
 The chain is external to the algorithm. It advances once per slot, independently of the input and the algorithm's operations. Its marginal is fair at every fixed slot. The algorithm receives no fault flags, has no access to the noise environment, and cannot reset the chain. Its other operations are ideal.
@@ -203,7 +203,7 @@ Lemma 2 implies
 \rho_t^w\succeq
 |s_t^w\rangle\langle s_t^w|
 +|d_t^w\rangle\langle d_t^w|.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 Substituting $`C_w=I-2P_w`$ into its update gives
@@ -213,7 +213,7 @@ Substituting $`C_w=I-2P_w`$ into its update gives
 \qquad
 \widetilde d_{t+1}^w
 =\kappa\bigl((I-P_w)d_t^w+P_ws_t^w\bigr).
-\tag{2}
+\qquad\text{(2)}
 ```
 
 The common control is then applied to $`\psi_t,\widetilde s_{t+1}^w,\widetilde d_{t+1}^w`$. Equation (2) remains valid for negative $`\kappa`$, including the alternating regime $`\delta>1/2`$.
@@ -238,7 +238,7 @@ For every marked input,
 ```math
 F_{t+1}^w-F_t^w
 \leq A_\delta\|P_w\psi_t\|^2.
-\tag{3}
+\qquad\text{(3)}
 ```
 
 **Proof.** Abbreviate $`x=P_w\psi_t`$, $`u=P_ws_t^w`$, and $`v=P_wd_t^w`$. The marked-subspace contribution to the increment is
@@ -253,11 +253,11 @@ The identities $`\beta\kappa^2-1=1-\beta=-c`$ therefore give the exact full incr
 ```math
 \begin{aligned}
 F_{t+1}^w-F_t^w
-={}&2\operatorname{Re}\langle x,u-v\rangle
+={}&2\mathrm{Re}\langle x,u-v\rangle
 -c(\|u\|^2+\|v\|^2)\\
 &-\beta(1-\kappa^2)\|(I-P_w)d_t^w\|^2.
 \end{aligned}
-\tag{4}
+\qquad\text{(4)}
 ```
 
 Completing the square separately in $`u`$ and $`v`$ bounds the first line by $`2\|x\|^2/c`$. The second line is nonpositive. Finally,
@@ -282,7 +282,7 @@ Consequently
 ```math
 \sum_{w=1}^NF_T^w
 \leq A_\delta\mathbb E_{\varnothing}K.
-\tag{5}
+\qquad\text{(5)}
 ```
 
 An idle does not create progress: with its enable flag identically zero, (2) reduces to $`s'=s,d'=\kappa d`$, and its increment is

@@ -35,7 +35,7 @@ G_w^2,&b=1.
 \end{cases}
 ```
 
-At $`\eta=0`$, a run of $`B`$ pairs therefore produces $`G_w^{2K}\lvert s\rangle`$ with $`K\sim\operatorname{Binomial}(B,1/2)`$. Write $`\theta=\arcsin(N^{-1/2})`$. Averaging the usual Grover success probability gives
+At $`\eta=0`$, a run of $`B`$ pairs therefore produces $`G_w^{2K}\lvert s\rangle`$ with $`K\sim\mathrm{Binomial}(B,1/2)`$. Write $`\theta=\arcsin(N^{-1/2})`$. Averaging the usual Grover success probability gives
 
 ```math
 P_B

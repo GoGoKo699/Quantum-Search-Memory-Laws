@@ -9,11 +9,11 @@ U_{\varnothing}=I,
 ```
 with physical call $`U_w^{b_t}`$ and the same stationary Markov activation process:
 ```math
-b_1\sim\operatorname{Bernoulli}(1/2),
+b_1\sim\mathrm{Bernoulli}(1/2),
 \qquad
 b_{t+1}=b_t\oplus z_t,
 \qquad
-z_t\stackrel{\mathrm{iid}}{\sim}\operatorname{Bernoulli}(\delta).
+z_t\stackrel{\mathrm{iid}}{\sim}\mathrm{Bernoulli}(\delta).
 ```
 Assume $`N\ge3`$, supplied $`0<\delta\le1`$, and at most one marked item. Put $`r=\min\{\delta,1-\delta\}`$.
 

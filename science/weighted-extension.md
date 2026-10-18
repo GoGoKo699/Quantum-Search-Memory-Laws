@@ -5,9 +5,9 @@ The Markov lower-bound argument extends from individual marked items to weighted
 Throughout,
 
 ```math
-b_1\sim\operatorname{Bernoulli}(1/2),\qquad
+b_1\sim\mathrm{Bernoulli}(1/2),\qquad
 b_{t+1}=b_t\oplus z_t,\qquad
-z_t\stackrel{\mathrm{iid}}{\sim}\operatorname{Bernoulli}(\delta),
+z_t\stackrel{\mathrm{iid}}{\sim}\mathrm{Bernoulli}(\delta),
 \qquad
 r=\min\{\delta,1-\delta\},
 ```
@@ -31,7 +31,7 @@ Assume that the output required on $`a`$ differs from that required on the refer
 \sum_a\omega_aP_a\preceq I,
 \qquad
 W=\sum_a\omega_a.
-\tag{1}
+\qquad\text{(1)}
 ```
 
 The projectors need not be mutually orthogonal or commute.
@@ -48,7 +48,7 @@ For $`0<\delta<1`$, every algorithm with the stated correctness and resource gua
 \frac{\delta(1-\delta)}{1-2\delta+2\delta^2}\,W
 \geq\frac4{25}\,rW.
 }
-\tag{2}
+\qquad\text{(2)}
 ```
 
 The expectation is on the reference input. At $`\delta=1`$, the memory-dependent conclusion reduces to the trivial bound zero.
@@ -69,7 +69,7 @@ This strengthens the original access. The packing condition gives
 
 ```math
 \sum_a\omega_a\widehat P_a\preceq J.
-\tag{3}
+\qquad\text{(3)}
 ```
 
 Let $`p_t=\langle\psi_t|J|\psi_t\rangle`$. Because the schedule records are retained, $`p_t`$ is the reference-input probability of making an actual call in slot $`t+1`$, and $`\sum_{t=0}^{T-1}p_t=\mathbb E_0K`$.
@@ -93,7 +93,7 @@ Since $`\widehat P_a`$ is a projector, (3) now yields
 &\leq A_\delta\langle\psi_t|J|\psi_t\rangle
 =A_\delta p_t.
 \end{aligned}
-\tag{4}
+\qquad\text{(4)}
 ```
 
 The correct output on $`a`$ differs from that on the reference. Therefore the event of returning the reference's required value has probabilities at least $`0.9`$ and at most $`0.1`$, respectively. Its probability difference is at least $`4/5`$. Lemma 4 then gives $`F_T^a\geq4/25`$ for every $`a`$. Summing (4) over the finite horizon gives
@@ -103,7 +103,7 @@ The correct output on $`a`$ differs from that on the reference. Therefore the ev
 \leq\sum_a\omega_aF_T^a
 \leq A_\delta\sum_{t=0}^{T-1}p_t
 =A_\delta\mathbb E_0K.
-\tag{5}
+\qquad\text{(5)}
 ```
 
 This proves the first inequality of (2). For $`r=\min\{\delta,1-\delta\}\leq1/2`$,
@@ -129,13 +129,13 @@ Define
 
 ```math
 \begin{aligned}
-\operatorname{fbs}(f,0^n)
+\mathrm{fbs}(f,0^n)
 ={}&\max_{\omega_B\geq0}\ \sum_{B\in\mathcal B_0}\omega_B\\
 \text{subject to }&
 \sum_{\substack{B\in\mathcal B_0\\i\in B}}\omega_B\leq1
 \quad\text{for every }i\in[n].
 \end{aligned}
-\tag{6}
+\qquad\text{(6)}
 ```
 
 All sensitive blocks are nonempty, so the coordinate constraints already imply $`\omega_B\leq1`$. The optimum is finite and attained. The same packing definition and its use for negligent queries are given in [ARS].
@@ -152,7 +152,7 @@ A noisy call is $`O_x^{b_t}`$, with exactly the common Markov process specified 
 O_{1_B}=I-2P_B,\qquad
 P_B=\sum_{i\in B}|i\rangle\langle i|
 \otimes|-\rangle\langle-|_R\otimes I_{\mathrm{work}}.
-\tag{7}
+\qquad\text{(7)}
 ```
 
 For every feasible solution of (6),
@@ -166,7 +166,7 @@ For every feasible solution of (6),
 \otimes I_{\mathrm{work}}\\
 &\preceq I.
 \end{aligned}
-\tag{8}
+\qquad\text{(8)}
 ```
 
 Each input $`1_B`$ requires an output different from that at $`0^n`$. Theorem 1 therefore applies to an optimal packing.
@@ -178,17 +178,17 @@ For $`0<\delta<1`$, every bounded-horizon algorithm computing $`f`$ with success
 ```math
 \boxed{
 \mathbb E_{0^n}K
-\geq\frac4{25A_\delta}\operatorname{fbs}(f,0^n)
-\geq\frac4{25}\,r\,\operatorname{fbs}(f,0^n).
+\geq\frac4{25A_\delta}\mathrm{fbs}(f,0^n)
+\geq\frac4{25}\,r\,\mathrm{fbs}(f,0^n).
 }
-\tag{9}
+\qquad\text{(9)}
 ```
 
 The response qubit may be in an arbitrary coherent state and may be entangled with the rest of the algorithm. The derivation uses the full projector in (7), not a restriction to a phase-kickback input.
 
 For uncontrolled phase access $`O_x|i\rangle=(-1)^{x_i}|i\rangle`$, use $`P_B=\sum_{i\in B}|i\rangle\langle i|\otimes I`$ instead. The same necessary bound holds for every function computable in that model. Uncontrolled phase access can have global-phase indistinguishability obstructions; for example, $`0^n`$ and $`1^n`$ cannot be distinguished by their uncontrolled phase oracles. The standard bit-response formulation avoids that access limitation and supports a direct comparison with classical bit queries.
 
-For the at-most-one-mark decision promise, the sensitive blocks are the $`n`$ singletons and $`\operatorname{fbs}(f,0^n)=n`$. Thus (9) specializes to the search memory bound.
+For the at-most-one-mark decision promise, the sensitive blocks are the $`n`$ singletons and $`\mathrm{fbs}(f,0^n)=n`$. Thus (9) specializes to the search memory bound.
 
 ## 3. Ordinary query complexity and availability
 
@@ -196,16 +196,16 @@ Let $`Q_{0.1}(f)`$ denote the ideal quantum query complexity of $`f`$ with error
 
 ```math
 q\geq Q_{0.1}(f).
-\tag{10}
+\qquad\text{(10)}
 ```
 
 Combining this with (9) gives the necessary actual-call bound
 
 ```math
 q=\Omega\!\left(
-Q_{0.1}(f)+r\,\operatorname{fbs}(f,0^n)
+Q_{0.1}(f)+r\,\mathrm{fbs}(f,0^n)
 \right).
-\tag{11}
+\qquad\text{(11)}
 ```
 
 Suppose $`f`$ is nonconstant. Since $`0^n\in D`$, some input $`y\in D`$ has a different output. On the event that every one of the first $`T`$ hidden bits is zero, the algorithm on $`y`$ has the same output distribution as on $`0^n`$. That event has probability $`\tfrac12(1-\delta)^{T-1}`$, so correctness on the two inputs requires
@@ -219,10 +219,10 @@ For $`0<\delta\leq1/2`$, this implies $`T=\Omega(1/\delta)`$. For $`\delta\geq1/
 ```math
 T=\Omega\!\left(
 Q_{0.1}(f)
-+r\,\operatorname{fbs}(f,0^n)
++r\,\mathrm{fbs}(f,0^n)
 +\frac1\delta
 \right).
-\tag{12}
+\qquad\text{(12)}
 ```
 
 When every consumed oracle call advances the noise and idle time does not, the call and slot budgets coincide, so (12) is also a call-count lower bound. When idle slots advance the noise, the availability term belongs to $`T`$, not to $`q`$.
@@ -231,10 +231,10 @@ No matching upper bound is asserted for arbitrary $`f`$. Equations (9)–(12) ar
 
 ## 4. Why the reference input remains fixed
 
-The corollary concerns $`\operatorname{fbs}(f,0^n)`$. It does not replace it by
+The corollary concerns $`\mathrm{fbs}(f,0^n)`$. It does not replace it by
 
 ```math
-\operatorname{fbs}(f)=\max_{x\in D}\operatorname{fbs}(f,x).
+\mathrm{fbs}(f)=\max_{x\in D}\mathrm{fbs}(f,x).
 ```
 
 For ideal bit or phase queries, a known input translation satisfies

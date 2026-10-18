@@ -41,11 +41,11 @@ The classical algorithm uses ordinary basis inputs and a measured bit response. 
 At slot $`t`$, an activation bit $`b_t`$ determines whether the oracle acts. An actual call applies $`O_w^{b_t}`$, or $`U_w^{b_t}`$ for the bit interface. The hidden process is
 
 ```math
-b_1\sim\operatorname{Bernoulli}(1/2),
+b_1\sim\mathrm{Bernoulli}(1/2),
 \qquad
 b_{t+1}=b_t\oplus z_t,
 \qquad
-z_t\overset{\mathrm{iid}}{\sim}\operatorname{Bernoulli}(\delta),
+z_t\overset{\mathrm{iid}}{\sim}\mathrm{Bernoulli}(\delta),
 \qquad 0<\delta\le1.
 ```
 
@@ -132,7 +132,7 @@ The joint statements mean that one algorithm achieves both resource scales. They
 | Two consecutive queries expose one innovation | IID logical oracle and upper bounds for $`1/2\le\delta\le1`$ | [Upper bounds](upper-bounds.md) |
 | Bounded classical sampling after mixing | Matched classical baseline with the same process | [Classical comparison](classical-comparison.md) |
 
-The memory potential also applies to weighted reflection alternatives. If $`\sum_a\omega_aP_a\preceq I`$, it gives $`\mathbb E_{\varnothing}K\ge(4/25)r\sum_a\omega_a`$. A Boolean-oracle specialization yields $`\Omega(r\,\operatorname{fbs}(f,0^n))`$ when the all-zero string lies in the promise. The identity reference is part of that claim; see the [weighted extension](weighted-extension.md).
+The memory potential also applies to weighted reflection alternatives. If $`\sum_a\omega_aP_a\preceq I`$, it gives $`\mathbb E_{\varnothing}K\ge(4/25)r\sum_a\omega_a`$. A Boolean-oracle specialization yields $`\Omega(r\,\mathrm{fbs}(f,0^n))`$ when the all-zero string lies in the promise. The identity reference is part of that claim; see the [weighted extension](weighted-extension.md).
 
 ## 6. Preparation, verification and time units
 
