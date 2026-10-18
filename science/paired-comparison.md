@@ -15,6 +15,8 @@ Keep the zero-or-one-mark phase-search task with $`N\ge3`$ and success $`9/10`$.
 
 Every slot has the same fair marginal omission channel. The algorithm receives neither activation flags nor an environment reset operation; independent refresh after a pair is part of the process definition. Every consumed slot, including padding and verification, counts as a physical query.
 
+Both $`N`$ and $`\eta`$ are supplied for selecting the fixed trial budgets; no estimation of $`\eta`$ is claimed.
+
 **Theorem P.** The optimal fixed query budget for this paired process is
 
 ```math
